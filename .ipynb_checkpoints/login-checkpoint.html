@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dummy Admin Login</title>
+</head>
+<body>
+  <h2>Dummy Admin Login</h2>
+  <form id="loginForm" method="POST" action="/login">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <br><br>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <script>
+    // Log form data on submit for verification (optional)
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      console.log('Submitting:', { username, password });
+    });
+  </script>
+</body>
+</html>
